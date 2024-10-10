@@ -21,26 +21,28 @@ bun dev
 
 ## TODO
 
-[x] Lista donde renderizaremos todas las generacioned de pokemones 
-    [x] result -> names
-    [x] versions -> names
-[] Seleccionar la generecion y mostrar todos los pokemos de dicha genereacion
-    [x] main_region -> name
-    [x] pokemon_species -> all
-    [] types -> all
-[] Cada pokemon muestra los datos y sus variedades y sus evolution-chain
-    [] name
-    [] abilities + oculta
-    [] stats
-    [] types
-    [] evolutions -> (Pokemon DB example)
-        [] types
-        [] levels
-    [] pokemon_species 
-        [] varieties
-            [] evolution 
-    [] sprit front no null || back no null || placeholder
-        [] hover front shiny
+- Lista donde renderizaremos todas las generacioned de pokemones 
+- [x] result -> names
+- [x] versions -> names
+
+- Seleccionar la generecion y mostrar todos los pokemos de dicha genereacion
+- [x] main_region -> name
+- [x] pokemon_species -> all
+- [] types -> all
+
+- Cada pokemon muestra los datos y sus variedades y sus evolution-chain
+- [] name
+- [] abilities + oculta
+- [] stats
+- [] types
+- [] evolutions -> (Pokemon DB example)
+- [] types
+- [] levels
+- [] pokemon_species 
+- [] varieties
+- [] evolution 
+- [] sprit front no null || back no null || placeholder
+- [] hover front shiny
 
 
 ## Initial Analisis
