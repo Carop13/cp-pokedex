@@ -1,8 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Pokedex App
 
-## Getting Started
+## Tech
 
-First, run the development server:
+- Next JS
+- React JS
+- Typescript
+- Tailwindcss
+
+## Run
 
 ```bash
 npm run dev
@@ -14,23 +19,37 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## TODO
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[x] Lista donde renderizaremos todas las generacioned de pokemones 
+    [x] result -> names
+    [x] versions -> names
+[] Seleccionar la generecion y mostrar todos los pokemos de dicha genereacion
+    [x] main_region -> name
+    [x] pokemon_species -> all
+    [] types -> all
+[] Cada pokemon muestra los datos y sus variedades y sus evolution-chain
+    [] name
+    [] abilities + oculta
+    [] stats
+    [] types
+    [] evolutions -> (Pokemon DB example)
+        [] types
+        [] levels
+    [] pokemon_species 
+        [] varieties
+            [] evolution 
+    [] sprit front no null || back no null || placeholder
+        [] hover front shiny
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Initial Analisis
 
-To learn more about Next.js, take a look at the following resources:
+dashboard -> Lista Generaciones
+ - generation -> Lista Pokemons
+    - Pokemon -> Data Pokemon
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+/generations 
+/generations/{id / name}
+/generations/{id / name}/pokemons/{id / name}
