@@ -4,8 +4,8 @@ export default async function Page({params}: {params: {pokemon: string}}) {
     const pokemon = await getPokemon(params.pokemon);
     console.log('pokemon: ', pokemon)
     return (
-        <div className="m-4">
-            holi
+        <div className="m-4 text-white">
+            <p>{pokemon.name}</p>
             {/* <p className="mb-4"><b>Main Region:</b> {pokemon.main_region.name}</p>
             <label className='text-white block'>Pokemon Species:</label>
             <ul className='pl-2 flex flex-wrap w-full'>

@@ -1,6 +1,5 @@
-import { Card } from "../ui/Cards/Cards";
 import { getGenerations, getGeneration } from '../Requests';
-import Link from 'next/link';
+import { List } from "../ui/List/List";
 
 export default async function Page() {
     const generations = await getGenerations();
@@ -10,27 +9,26 @@ export default async function Page() {
     const data: any = await Promise.allSettled(promiseArray);
     const newsFullGenerations = results.map((generation: { name: string, url: string}, index: number) => {
         return { ...generation, 
-            generation: data[index].value
+            versionGroups: data[index].value.version_groups,
+            types: data[index].value.types
         }
     })
     
-    const getLinkId = (link: string): string => {
-        const linkId: string = link.split('/')[6];
+    const getLinkId = (link: { name: string, url: string}): string => {
+        const linkId: string = link.url.split('/')[6];
         return `generations/${linkId}`
-    }
+    } 
 
+    //console.log('newsFullGenerationss: ', newsFullGenerations[0].types)
     return (
         <>
             <h1>Generations:</h1>
-            <ul>
-                {newsFullGenerations.map((item: { name: string, url: string, generation: {version_groups: { name: string, url: string}} }) => (
-                    <li key={item.name}>
-                        <Link href={getLinkId(item.url)} className="rounded bg-gray-50 p-2 shadow-sm block mb-2">
-                            <Card name={item.name} extraData={item.generation.version_groups} extraTitle={'Versions'}/>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+            <List 
+            list={newsFullGenerations} 
+            hrefHandler={getLinkId}
+            link={true} 
+            listTitle={'Version'}
+            insideList={'versionGroups'}/>
         </>
     )
   }

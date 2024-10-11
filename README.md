@@ -28,10 +28,10 @@ bun dev
 - Seleccionar la generecion y mostrar todos los pokemos de dicha genereacion
 - [x] main_region -> name
 - [x] pokemon_species -> all
-- [ ] types -> all
+- [x] types -> all
 
 - Cada pokemon muestra los datos y sus variedades y sus evolution-chain
-- [ ] name
+- [x] name
 - [ ] abilities + oculta
 - [ ] stats
 - [ ] types

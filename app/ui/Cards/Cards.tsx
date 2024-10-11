@@ -10,7 +10,7 @@ export function Card({
   
     return (
         <div className="p-4 gap-4">
-          <h3 className="text-m font-medium text-black uppercase mb-2">{name}</h3>
+          <h3 className="text-m font-medium text-black capitalize mb-2">{name}</h3>
           <label className='text-black'>{extraTitle}:</label>
           <ul className='pl-2'>
             {extraData.map((data: { name: string, url: string} ) => (

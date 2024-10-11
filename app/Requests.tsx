@@ -32,3 +32,14 @@ export async function getPokemon(pokemon: string) {
 
     return res.json()
 }
+
+export async function getTypes(type: string) {
+    const res = await fetch(`${Based_API}type/${type}`)
+
+    if (!res.ok) {
+        // This will activate the closest `error.js` Error Boundary
+        throw new Error('Failed to fetch data')
+    }
+
+    return res.json()
+}
