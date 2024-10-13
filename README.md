@@ -38,7 +38,7 @@ bun dev
 - [x] types
 - [x] evolutions -> (Pokemon DB example)
 - - [x] levels
-- - [] Load Sprites
+- - [ ] Load Sprites
 - [x] pokemon_species 
 - [x] varieties
 - - [ ] evolution 
