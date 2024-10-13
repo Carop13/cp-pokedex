@@ -25,3 +25,19 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.main-generations {
+  max-width: 900px;
+}
+
+.main-generations > ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.main-generations > ul > li {
+  max-width: 30%;
+  width: 100%;
+}

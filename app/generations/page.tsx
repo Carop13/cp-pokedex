@@ -18,17 +18,19 @@ export default async function Page() {
         const linkId: string = link.url.split('/')[6];
         return `generations/${linkId}`
     } 
-
-    //console.log('newsFullGenerationss: ', newsFullGenerations[0].types)
+    
     return (
         <>
             <h1>Generations:</h1>
-            <List 
-            list={newsFullGenerations} 
-            hrefHandler={getLinkId}
-            link={true} 
-            listTitle={'Version'}
-            insideList={'versionGroups'}/>
+            <div className='main-generations'>
+                <List 
+                list={newsFullGenerations} 
+                hrefHandler={getLinkId}
+                link={true} 
+                listTitle={'Version'}
+                insideList={'versionGroups'}/>
+            </div>
+            
         </>
     )
   }

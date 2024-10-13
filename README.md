@@ -31,18 +31,17 @@ bun dev
 - [x] types -> all
 
 - Cada pokemon muestra los datos y sus variedades y sus evolution-chain
+- [x] sprit front no null || back no null || placeholder
 - [x] name
-- [ ] abilities + oculta
-- [ ] stats
-- [ ] types
-- [ ] evolutions -> (Pokemon DB example)
-- [ ] types
-- [ ] levels
-- [ ] pokemon_species 
-- [ ] varieties
-- [ ] evolution 
-- [ ] sprit front no null || back no null || placeholder
-- [ ] hover front shiny
+- [x] abilities + oculta
+- [x] stats
+- [x] types
+- [x] evolutions -> (Pokemon DB example)
+- - [x] levels
+- - [] Load Sprites
+- [x] pokemon_species 
+- [x] varieties
+- - [ ] evolution 
 
 
 ## Initial Analisis

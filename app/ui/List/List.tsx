@@ -23,7 +23,7 @@ export function List({
     const returnChild = (item) => { 
         return link ? 
         (
-        <Link href={hrefHandler(item)} className="block text-black rounded mb-3 p-2 shadow-sm bg-gray-50 min-w-36">
+        <Link href={hrefHandler(item)} className="block text-black rounded mb-3 p-2 shadow-sm bg-gray-50 min-w-36 h-full">
             {(insideList 
                 ? <h3 className="text-m font-medium text-black uppercase mb-2">{item.name}</h3> 
                 : <p className="capitalize">{item.name}</p>)}
@@ -36,12 +36,12 @@ export function List({
             : <div className="block text-black rounded mb-3 p-2 shadow-sm bg-gray-50 capitalize">
                 {(item.sprites && <img src={item.sprites.name_icon} />)}
               </div> )
-    }
+    } 
   
     return (
-        <ul className={`p-2 ${!insideList ? 'flex flex-wrap' : ''}`}>
-            {list.map((item) => (
-                <li key={item.name} className={`ml-2 text-sm font-medium text-black ${insideList ? 'list-disc' : ''}`}>
+        <ul className={`p-2 ${!insideList ? 'flex flex-wrap gap-y-5' : ''}`}>
+            {list.map((item, index) => (
+                <li key={`${item.name}-${index}`} className={`ml-2 text-sm font-medium text-black ${insideList ? 'list-disc' : ''}`}>
                     {returnChild(item)}
                 </li>
             ))}
